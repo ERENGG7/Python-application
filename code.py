@@ -145,10 +145,10 @@ PU_SPECIALITIES = {
 def info():
     print(BLUE+ITALIC_STYLE+TITLE+RESET)
     print(YELLOW+"When entering a student's faculty number,"
-       +"the program displays the faculty, specialty and form of study,"
-       +"to exit the program type esc or ESK."
-       +"Specialties from the Lyuben Karavelov branch in Kardzhali are not included"
-       +"Enter uni number:"+RESET,end="")
+       +"\nthe program displays the faculty, specialty and form of study,"
+       +"\nto exit the program type esc or ESK."
+       +"\nSpecialties from the Lyuben Karavelov branch in Kardzhali are not included"
+       +"\nEnter uni number:"+RESET,end="")
 #message if uni number is not valid: 
 def excetion_message():
     print(RED+"Invalid number!"+RESET)
@@ -181,7 +181,7 @@ def get_speciality(uni_number):
     return ""
 #func for get form of education: 
 def get_mode(uni_number):
-   code = int(uni_number[3:6])
+   code = int(uni_number[2]+uni_number[3]+uni_number[4]+uni_number[5])
    if code not in PU_SPECIALITIES:
       return ""
 
